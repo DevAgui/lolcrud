@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Texto;
+    src: url("../fonts/Montserrat.ttf");
+}
+body{
+    font-family: Texto!important;
+    background-image: url("../images/login-background.jpg");
+    background-position: 0%;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+
+form>.btn-primario{
+    background-color: #6BB3F8;
+    color: white;
+}
+form>.btn-primario:hover{
+    background-color: white;
+    color: #6BB3F8;
+}
+btn.primario{
+    background-color: #6BB3F8;
+    color: white;
+}
+btn-primario:hover{
+    background-color: white;
+    color: #6BB3F8;
+}
