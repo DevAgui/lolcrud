@@ -24,6 +24,8 @@ Y para añadir un nuevo campeón, rellenamos los datos que nos pide
 Y así quedaría una vez insertado:
 ![image](https://user-images.githubusercontent.com/91873599/155421451-79cca4fd-007b-43ef-aaac-04f686953ae0.png)
 
+He dejado que el usuario admita NULL para que en caso de que el jugador no conozca al mismo pero lo haya visto jugar y le haya hecho comprender mejor al campeón, que lo introduzca.
+
 ## Borrado de un campeón
 
 ![image](https://user-images.githubusercontent.com/91873599/155421642-17ebdc7d-cc4f-4f4b-b118-b930255bc4a7.png)
