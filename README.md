@@ -5,7 +5,7 @@ Mi proyecto de Crud va a tratar de una interfaz para que los usuarios (nuevos ju
 
 ![image](https://user-images.githubusercontent.com/91873599/155420281-50e53bfa-352b-4283-9cb5-aa4bb4583c59.png)
 
-## Página Principal
+## Listado
 
 Ésta es mi página principal en la que aparece directamente el listado de campeones con todas las opciones
 
