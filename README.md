@@ -1,5 +1,5 @@
 # LoLCRUD
-Mi proyecto de Crud va a tratar de una interfaz para que los usuarios (nuevos jugadores de League of Legends) puedan introducir, borrar, modificar y consultar todos los campeones que deseen, para que se vayan familiarizando con los mismos. Así como para que apunten los usuarios que conocen que han visto jugar un campeón que ellos controlan
+Mi proyecto de Crud va a tratar de una interfaz para que los usuarios (nuevos jugadores de League of Legends) puedan introducir, borrar, modificar y consultar todos los campeones que deseen, para que se vayan familiarizando con los mismos. Así como para que apunten los conocidos que conocen que han visto jugar un campeón que ellos controlan.
 
 ## BBDD
 
@@ -28,7 +28,7 @@ Y así quedaría una vez insertado:
 
 ![image](https://user-images.githubusercontent.com/91873599/155421642-17ebdc7d-cc4f-4f4b-b118-b930255bc4a7.png)
 
-Para borrar el campeón solo deberemos clicar a la papeleray aceptar el modal que nos sale al final.
+Para borrar el campeón solo deberemos clicar a la papelera y aceptar el modal que nos sale al final.
 
 
 
