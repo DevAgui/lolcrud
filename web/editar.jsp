@@ -48,22 +48,22 @@
                 session.setAttribute("error", "campeon repetido");
                 response.sendRedirect("index.jsp");
             }else {
-/*
+
                 ResultSet listadoCampeon = s.executeQuery("SELECT * FROM listado_campeon");
-                listadoCampeon.next();*/
+                listadoCampeon.next();
 
                 String insertarCampeon = "UPDATE listado_campeon SET "
                         
-                        + "NomCamp='" +request.getParameter("NomCampEdi") + "',"
+                        + "NomCamp='" + request.getParameter("NomCampEdi") + "',"
                         + "LineaCamp='" + request.getParameter("LineaCampEdi") + "',"
                         + "RolHabCamp='" + request.getParameter("RolHabCampEdi")+ "',"
-                        + "DescCamp='"+ request.getParameter("DescCampEdi") + "',"
-                        + "CodUsu='"+ request.getParameter("CodUsuEdi") + "'";
-                       // + "WHERE CodCamp="+ Integer.parseInt(request.getParameter(identificadorCampeon));
+                        + "DescCamp='"+ request.getParameter("DescCampEdi")+ "'"
+                       //+ "CodUsu='"+ request.getParameter("CodUsuEdi") + "'";
+                        + "WHERE CodCamp='"+ request.getParameter(identificadorCampeon)+ "'";
                 
-               // s.execute(insertarCampeon);
+                s.execute(insertarCampeon);
                 out.print(insertarCampeon);
-               // response.sendRedirect("index.jsp");
+                response.sendRedirect("index.jsp");
             }
 
         %>
