@@ -26,24 +26,45 @@
         <%request.setCharacterEncoding("UTF-8");%>
 
         <%
+             
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "root");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "");
             Statement s = conexion.createStatement();
             Statement u = conexion.createStatement();
             
             
             String identificador = request.getParameter("NomCamp");
+            
         %>
           
     <div id="wrapper" class="container bg-light vh-100">
-        <h1 class="text-center py-5 text-danger">Edita la línea del campeón que quieras.</h1>
-            <form method="" action="editar.jsp">
-                <div class="inputs">
-                    <label>Nuevo nombre del campeón</label>
-                    <input type="text"  name="NomCamp" required />
-                    <button type="submit">Editar campeón</button>
-                </div>
-            </form>
+        <form action="editar.jsp?id="<%request.getParameter("id");%>">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="NomCampEdi">Nuevo nombre</label>
+                                    <input type="hidden" name="id" value=""/>
+                                    <input class="form-control" type="text" name="NomCampEdi" required/><br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="LineaCampEdi">Nueva línea</label>
+                                    <input class="form-control" type="text" name="LineaCampEdi" required/></br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="RolHabCampEdi">Nuevo rol habitual</label>
+                                    <input class="form-control" type="text" name="RolHabCampEdi" required/></br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="DescCampEdi">Nueva descripción</label>
+                                    <input class="form-control" type="text" name="DescCampEdi" required/></br>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <button class="btn btn-primary" type="submit" value="Aceptar">Editar</button>
+                        </div>
+                    </div>
+                    </form>
         </div>
 
 

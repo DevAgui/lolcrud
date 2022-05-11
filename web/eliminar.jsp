@@ -26,16 +26,18 @@
         <%request.setCharacterEncoding("UTF-8");%>
 
         <%
+
             String identificadorCampeon = request.getParameter("id");
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "");
             Statement s = conexion.createStatement();
 
-            String eliminar = "DELETE FROM listado_campeon WHERE CodCamp = " + identificadorCampeon;
+            
+                String eliminar = "DELETE FROM listado_campeon WHERE CodCamp = " + identificadorCampeon;
 
-            s.execute(eliminar);
-            out.print(eliminar);
-            response.sendRedirect("index.jsp");
+                s.execute(eliminar);
+                response.sendRedirect("listado.jsp");
+           
 
         %>
 

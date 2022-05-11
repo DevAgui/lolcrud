@@ -54,15 +54,15 @@
 
                 String insertarCampeon = "UPDATE listado_campeon SET "
                         
+                        + "CodCamp='" + request.getParameter("CodCampEdi") + "',"
                         + "NomCamp='" + request.getParameter("NomCampEdi") + "',"
                         + "LineaCamp='" + request.getParameter("LineaCampEdi") + "',"
                         + "RolHabCamp='" + request.getParameter("RolHabCampEdi")+ "',"
                         + "DescCamp='"+ request.getParameter("DescCampEdi")+ "'"
-                       //+ "CodUsu='"+ request.getParameter("CodUsuEdi") + "'";
-                        + "WHERE CodCamp='"+ request.getParameter(identificadorCampeon)+ "'";
+                        + "WHERE CodCamp='"+ request.getParameter("CodCampEdi")+ "'";
                 
                 s.execute(insertarCampeon);
-                out.print(insertarCampeon);
+                //out.print(insertarCampeon);
                 response.sendRedirect("index.jsp");
             }
 
