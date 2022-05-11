@@ -22,12 +22,16 @@
         <%request.setCharacterEncoding("UTF-8");%>
 
         <%
+            
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "");
             Statement s = conexion.createStatement();
 
             Statement w = conexion.createStatement();
 
+            session.getAttribute("usuarioRegistrado");
+            session.getAttribute("codigoUsuario");
+            
             boolean campeonRepetido = false;
 
             ResultSet campeon = w.executeQuery("SELECT * FROM listado_campeon");
@@ -40,21 +44,22 @@
 
             if (campeonRepetido) {
                 session.setAttribute("error", "campeon repetido");
-                response.sendRedirect("index.jsp");
+                //response.sendRedirect("index.jsp");
             } else {
 
                 ResultSet listadoCampeon = s.executeQuery("SELECT * FROM listado_campeon");
                 listadoCampeon.next();
 
-                String insertarCampeon = "INSERT INTO listado_campeon(NomCamp, LineaCamp, RolHabCamp, DescCamp) VALUES('" 
+                String insertarCampeon = "INSERT INTO listado_campeon(NomCamp, LineaCamp, RolHabCamp, DescCamp, CodUsu) VALUES('" 
                         + request.getParameter("NomCamp") + "','"
                         + request.getParameter("LineaCamp") + "','"
                         + request.getParameter("RolHabCamp") + "','"
-                        + request.getParameter("DescCamp") + "')";
+                        + request.getParameter("DescCamp") + "','"
+                        + session.getAttribute("codigoUsuario")+ "')";
                 
                 s.execute(insertarCampeon);
                 out.print(insertarCampeon);
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("listado.jsp");
             }
 
         %>
