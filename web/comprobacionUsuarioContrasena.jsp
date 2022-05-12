@@ -24,7 +24,7 @@
             try {
 
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "");
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3308/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "root");
                 Statement s = conexion.createStatement();
                 Statement u = conexion.createStatement();
 
@@ -41,16 +41,17 @@
                         session.setAttribute("usuarioRegistrado", listadoUsuario.getString("AliasUsu"));
                         session.setAttribute("contrasenaUsuario", listadoUsuario.getString("Contrasena"));
                         session.setAttribute("codigoUsuario", listadoUsuario.getString("CodUsu"));
-                       response.sendRedirect("listado.jsp");
-
-                    } else{
-
-                       response.sendRedirect("index.jsp");
+                        response.sendRedirect("listado.jsp");
 
                     }
 
-                }
+                       
 
+                    
+
+                }
+                
+            response.sendRedirect("index.jsp");
             } catch (Exception e) {
 
                 out.print(e);

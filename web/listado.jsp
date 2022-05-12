@@ -32,12 +32,18 @@
 
                 if (session.getAttribute("usuarioRegistrado") == null) {
 
+
+                    session.setAttribute("error", "Debe iniciar sesión para acceder al listado");
+                    session.setAttribute("entradaIlegal", "si");
                     response.sendRedirect("index.jsp");
 
+                } else{
+
+                    session.setAttribute("entradaIlegal", "no");
                 }
                 
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "");
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3308/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "root");
                 Statement s = conexion.createStatement();
                 Statement u = conexion.createStatement();
 

@@ -29,7 +29,7 @@
 
             String identificadorCampeon = request.getParameter("id");
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3308/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "root");
             Statement s = conexion.createStatement();
 
             Statement w = conexion.createStatement();
