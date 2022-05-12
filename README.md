@@ -1,9 +1,18 @@
 # LoLCRUD
-Mi proyecto de Crud va a tratar de una interfaz para que los usuarios (nuevos jugadores de League of Legends) puedan introducir, borrar, modificar y consultar todos los campeones que deseen, para que se vayan familiarizando con los mismos. Así como para que apunten los conocidos que conocen que han visto jugar un campeón que ellos controlan.
 
-## BBDD
+Mi proyecto de Crud trata de una interfaz para que los usuarios (nuevos jugadores de League of Legends) puedan introducir, borrar, modificar y consultar todos los campeones que deseen, para que se vayan familiarizando con los mismos, facilitando así que vayan reconociendo sus características más básicas como su nombre, posición, rol y su "lore".
 
-![image](https://user-images.githubusercontent.com/91873599/155420281-50e53bfa-352b-4283-9cb5-aa4bb4583c59.png)
+Constará de un Login con control de acceso de usuario (registrado ya en la base de datos).
+Se distinguen dos tipos de usuarios:
+
+- ADMINISTRADOR:
+
+Podrá consultar, eliminar, modificar y añadir usuarios.
+
+- USUARIO SIN PERMISOS DE ADMINISTRADOR:
+
+Podrá consultar, eliminar, modificar y añadir campeones.
+
 
 ## Listado
 
