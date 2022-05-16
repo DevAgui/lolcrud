@@ -1,6 +1,6 @@
 # LoLCRUD
 
-Mi proyecto de Crud trata de una interfaz para que los usuarios (nuevos jugadores de League of Legends) puedan introducir, borrar, modificar y consultar todos los campeones que deseen, para que se vayan familiarizando con los mismos, facilitando así que vayan reconociendo sus características más básicas como su nombre, posición, rol y su "lore".
+Mi proyecto de CRUD trata de una interfaz para que los usuarios (nuevos jugadores de League of Legends) puedan introducir, borrar, modificar y consultar todos los campeones que deseen, para que se vayan familiarizando con los mismos, facilitando así que vayan reconociendo sus características más básicas como su nombre, posición, rol y su "lore".
 
 Constará de un Login con control de acceso de usuario (registrado ya en la base de datos).
 Se distinguen dos tipos de usuarios:
@@ -14,9 +14,9 @@ Podrá consultar, eliminar, modificar y añadir usuarios.
 Podrá consultar, eliminar, modificar y añadir campeones.
 
 
-## Listado
+## Listado de Campeones
 
-Ésta es mi página principal en la que aparece directamente el listado de campeones con todas las opciones
+Ésta es la página principal del listado de campeones, en el que al usuario le aparece solo sus campeones registrados
 
 ![image](https://user-images.githubusercontent.com/91873599/155420511-f4b13b78-405b-495e-b5af-c01573fcb2ef.png)
 
@@ -35,7 +35,6 @@ Y así quedaría una vez insertado:
 
 ![image](https://user-images.githubusercontent.com/91873599/155421451-79cca4fd-007b-43ef-aaac-04f686953ae0.png)
 
-He dejado que el usuario admita NULL para que en caso de que el jugador no conozca al mismo pero lo haya visto jugar y le haya hecho comprender mejor al campeón, que lo introduzca.
 
 ## Borrado de un campeón
 
