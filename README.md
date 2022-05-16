@@ -14,33 +14,50 @@ Podrá consultar, eliminar, modificar y añadir usuarios.
 Podrá consultar, eliminar, modificar y añadir campeones.
 
 
-## Listado de Campeones
-
-Ésta es la página principal del listado de campeones, en el que al usuario le aparece solo sus campeones registrados
-
-![image](https://user-images.githubusercontent.com/91873599/155420511-f4b13b78-405b-495e-b5af-c01573fcb2ef.png)
+## PÁGINAS
 
 
-## Añadir un nuevo campeón
+### Login
 
-Para añadir un nuevo campeón solo hay que clicar al botón de insertar y saltará un modal con todos los inputs.
+![image](https://user-images.githubusercontent.com/91873599/168672531-ee0ac787-9935-414b-984e-31e4955a7bbf.png)
 
-![image](https://user-images.githubusercontent.com/91873599/155420681-c748973b-dd41-4ace-a88d-b2934a31f0e3.png)
+Se trata de un login básico en el que tendremos que introducir nuestro usuario y contraseña. Solo en caso de que estén registradas en la base de datos podrá pasar, de lo contrario se redirigirá al usuario al login mostrándole éste mensaje:
 
-Y para añadir un nuevo campeón, rellenamos los datos que nos pide
+![image](https://user-images.githubusercontent.com/91873599/168672834-957904e1-ce7c-415b-8f53-32421ed14c0f.png)
 
-![image](https://user-images.githubusercontent.com/91873599/155421371-43afee2c-8ec9-4153-b184-27f63b69b4c0.png)
-
-Y así quedaría una vez insertado:
-
-![image](https://user-images.githubusercontent.com/91873599/155421451-79cca4fd-007b-43ef-aaac-04f686953ae0.png)
+En el caso en el que tengamos un usuario malintencionado que pretenda ver el listado de campeones o del admin, existe un control que redirige al usuario de vuelta al login:
 
 
-## Borrado de un campeón
+![image](https://user-images.githubusercontent.com/91873599/168673123-218bb933-9174-4b01-a241-6f7f05548af6.png)
 
-![image](https://user-images.githubusercontent.com/91873599/155421642-17ebdc7d-cc4f-4f4b-b118-b930255bc4a7.png)
 
-Para borrar el campeón solo deberemos clicar a la papelera y aceptar el modal que nos sale al final.
+![image](https://user-images.githubusercontent.com/91873599/168673177-83ab0c80-dfe4-43fa-819f-881bbd7ff23f.png)
+
+### Logout
+
+Para salir de la sesión solo tenemos que clicar en logout y nos devolverá al login.
+
+### Listado de Campeones
+
+Ésta es la página principal del listado de campeones, en el que al usuario le aparece solo sus campeones registrados y podrá editarlos, eliminarlos y añadir nuevos si así lo desea.
+
+![image](https://user-images.githubusercontent.com/91873599/168673275-aa18caec-5876-4102-a430-78c94fec2a5d.png)
+
+
+### Listado del Administrador
+
+Se trata de un superusuario con todo tipo de derechos sobre los usuarios. Puede eliminarlos, modificarlos, añadir y ver todos sus datos:
+
+![image](https://user-images.githubusercontent.com/91873599/168673599-1fcc1943-26ab-4aff-953f-c7ded7c6b38e.png)
+
+
+### Enlace a vídeo de YouTube
+
+
+
+¡Si te ha gustado dale estrellita!
+
+
 
 
 
