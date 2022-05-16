@@ -91,9 +91,11 @@ Se trata de un superusuario con todo tipo de derechos sobre los usuarios. Puede 
 
 ### Enlace a vídeo de YouTube
 
-Vídeo de YouTube explicando brevemente el CRUD: (https://youtu.be/pZl9CyETNuo)
+Vídeo de YouTube explicando brevemente el CRUD: https://youtu.be/pZl9CyETNuo
 
-¡Si te ha gustado el repo, dale estrellita!
+
+
+¡Si te ha gustado el repo, dale estrellita! 🌟🌟🌟
 
 
 
