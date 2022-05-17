@@ -34,7 +34,8 @@ Se trata de un login básico en el que tendremos que introducir nuestro usuario 
 
 
 
-![image](https://user-images.githubusercontent.com/91873599/168672834-957904e1-ce7c-415b-8f53-32421ed14c0f.png)
+![Captura](https://user-images.githubusercontent.com/91873599/168862727-ba9c26f3-c477-4299-8ad2-dc564dbdfaea.PNG)
+
 
 
 
