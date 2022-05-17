@@ -81,13 +81,13 @@
                         %>
 
                         <tr>
-                            <td class="col-2"> <%= listadoCampeones.getString("CodCamp")%></td>
-                            <td class="col-2"> <%= listadoCampeones.getString("NomCamp")%></td>
-                            <td class="col-2"> <%= listadoCampeones.getString("LineaCamp")%></td> 
-                            <td class="col-2"> <%= listadoCampeones.getString("RolHabCamp")%></td>
-                            <td class="col-4"> <%= listadoCampeones.getString("DescCamp")%></td>
+                            <td class="col-2"> <%=listadoCampeones.getString("CodCamp")%></td>
+                            <td class="col-2"> <%=listadoCampeones.getString("NomCamp")%></td>
+                            <td class="col-2"> <%=listadoCampeones.getString("LineaCamp")%></td> 
+                            <td class="col-2"> <%=listadoCampeones.getString("RolHabCamp")%></td>
+                            <td class="col-4"> <%=listadoCampeones.getString("DescCamp")%></td>
                             <!--<td class="col-3"> listadoCampeones.getString("CodUsu")</td>-->
-                            <td class="col-1"><a href="editarCampeon.jsp?id=<%=listadoCampeones.getString("CodCamp")%>" class="col-1 bi bi-pencil-square rowWithImage" data-bs-toggle="modal" data-bs-target="#modalEditar"></a></td> 
+                            <td class="col-1"><a href="editarCampeon.jsp?id=<%=listadoCampeones.getString("CodCamp") + listadoCampeones.getString("NomCamp")+ listadoCampeones.getString("LineaCamp") + listadoCampeones.getString("RolHabCamp") + listadoCampeones.getString("DescCamp")%>" class="col-1 bi bi-pencil-square rowWithImage" data-bs-toggle="modal" data-bs-target="#modalEditar"></a></td> 
                             <td class="col-1"><a href="eliminarCampeon.jsp?id=<%=listadoCampeones.getString("CodCamp")%>" class=" bi-trash3-fill rowWithImage text-danger" onclick="alert('Has eliminado a <%= listadoCampeones.getString("NomCamp")%> con éxito.')"></a></td>
                         </tr>
                         <%
@@ -188,23 +188,23 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <label for="CodCampEdi">Introduzca el código</label>
-                                    <input class="form-control" type="text" name="CodCampEdi" required"><br>
+                                    <input class="form-control" type="text" name="CodCampEdi" required value="<% request.getParameter("CodCampEdi");%>"><br>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="NomCampEdi">Nuevo nombre</label>
-                                    <input class="form-control" type="text" name="NomCampEdi" required/><br>
+                                    <input class="form-control" type="text" name="NomCampEdi" required value="<%= request.getParameter("NomCampEdi")%>"/><br>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="LineaCampEdi">Nueva línea</label>
-                                    <input class="form-control" type="text" name="LineaCampEdi" required/></br>
+                                    <input class="form-control" type="text" name="LineaCampEdi" required value="<%= request.getParameter("LineaCampEdi")%>"/></br>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="RolHabCampEdi">Nuevo rol habitual</label>
-                                    <input class="form-control" type="text" name="RolHabCampEdi" required/></br>
+                                    <input class="form-control" type="text" name="RolHabCampEdi" required placeholder="RolHabCampEdi" value="<%= request.getParameter("RolHabCampEdi")%>" /></br>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="DescCampEdi">Nueva descripción</label>
-                                    <input class="form-control" type="text" name="DescCampEdi" required/></br>
+                                    <input class="form-control" type="text" name="DescCampEdi" required value="<%= request.getParameter("DescCampEdi")%>"/></br>
                                 </div>
                             </div>
                     </div>

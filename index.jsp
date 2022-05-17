@@ -25,10 +25,6 @@
 
         <%request.setCharacterEncoding("UTF-8");%>
 
-        <div id="wrapper" class="container">
-            <nav>
-            <form action="logout.jsp">
-
                 <p>Loggeado como: <%
                     if(session.getAttribute("usuarioRegistrado") == null){
                     
@@ -43,10 +39,6 @@
                     }
             
                      %></p>
-                <button type="submit" class="btn btn-primary">Logout</button>
-            </form>
-                </nav>
-        </div>
 
         <%
             Class.forName("com.mysql.jdbc.Driver");
@@ -76,13 +68,25 @@
                         </div>
                         <button type="submit" class="btn btn-primary my-2">Entrar</button>
                         <h3 class="text-center py-3">
-                            <%          if (session.getAttribute("entradaIlegal").equals("si")) {
 
+                            <%          
+                                   
+                                   
+                                    if(session.getAttribute("error") == null){
+                                    
+                                        session.setAttribute("entradaIlegal", "no");
+                                        session.setAttribute("error", "Inicie Sesión.");
+                                        out.print(session.getAttribute("error"));
+
+                                    
+                                    } else if (session.getAttribute("entradaIlegal").equals("si")) {
+                                    
                                         out.print(session.getAttribute("error"));
 
                                     } else{
-
+                                    
                                         out.print(session.getAttribute("error"));
+                                        
                                     }
 
                                 } catch (Exception e) {

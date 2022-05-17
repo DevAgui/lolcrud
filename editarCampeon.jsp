@@ -29,7 +29,7 @@
 
             String identificadorCampeon = request.getParameter("id");
             Class.forName("com.mysql.jdbc.Driver");
-           Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/lolcrud?useSSL=false&allowPublicKeyRetrieval=true", "root", "");
             Statement s = conexion.createStatement();
 
             Statement w = conexion.createStatement();
@@ -62,6 +62,7 @@
                         + "CodUsu='" + session.getAttribute("codigoUsuario")+ "'"
                         + " WHERE CodCamp='"+ request.getParameter("CodCampEdi")+ "'";
                 
+                session.setAttribute("datos", listadoCampeon);
                 s.execute(insertarCampeon);
                 out.print(insertarCampeon);
                 response.sendRedirect("listado.jsp");
