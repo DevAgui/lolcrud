@@ -87,7 +87,16 @@
                             <td class="col-2"> <%=listadoCampeones.getString("RolHabCamp")%></td>
                             <td class="col-4"> <%=listadoCampeones.getString("DescCamp")%></td>
                             <!--<td class="col-3"> listadoCampeones.getString("CodUsu")</td>-->
-                            <td class="col-1"><a href="editarCampeon.jsp?id=<%=listadoCampeones.getString("CodCamp") + listadoCampeones.getString("NomCamp")+ listadoCampeones.getString("LineaCamp") + listadoCampeones.getString("RolHabCamp") + listadoCampeones.getString("DescCamp")%>" class="col-1 bi bi-pencil-square rowWithImage" data-bs-toggle="modal" data-bs-target="#modalEditar"></a></td> 
+                            <td class="col-1">
+                                <form action="formularioEditarCampeones.jsp" method="get">
+                                    <input type="hidden" name="CodCamp" value="<%=listadoCampeones.getString("CodCamp")%>">
+                                    <input type="hidden" name="NomCamp" value="<%=listadoCampeones.getString("NomCamp")%>">
+                                    <input type="hidden" name="LineaCamp" value="<%=listadoCampeones.getString("LineaCamp")%>">
+                                    <input type="hidden" name="RolHabCamp" value="<%=listadoCampeones.getString("RolHabCamp")%>">
+                                    <input type="hidden" name="DescCamp" value="<%=listadoCampeones.getString("DescCamp")%>">
+                                    <button href="formularioEditarCampeones.jsp" class="col-1 bi bi-pencil-square rowWithImage" type="submit"></button>
+                                </form>
+                            </td> 
                             <td class="col-1"><a href="eliminarCampeon.jsp?id=<%=listadoCampeones.getString("CodCamp")%>" class=" bi-trash3-fill rowWithImage text-danger" onclick="alert('Has eliminado a <%= listadoCampeones.getString("NomCamp")%> con éxito.')"></a></td>
                         </tr>
                         <%
@@ -176,48 +185,7 @@
 
 
         <!-- Modal para editar campeones -->
-        <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalEditar">Nuevo campeón</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body container">
-                        <form action="editarCampeon.jsp">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="CodCampEdi">Introduzca el código</label>
-                                    <input class="form-control" type="text" name="CodCampEdi" required value="<% request.getParameter("CodCampEdi");%>"><br>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="NomCampEdi">Nuevo nombre</label>
-                                    <input class="form-control" type="text" name="NomCampEdi" required value="<%= request.getParameter("NomCampEdi")%>"/><br>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="LineaCampEdi">Nueva línea</label>
-                                    <input class="form-control" type="text" name="LineaCampEdi" required value="<%= request.getParameter("LineaCampEdi")%>"/></br>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="RolHabCampEdi">Nuevo rol habitual</label>
-                                    <input class="form-control" type="text" name="RolHabCampEdi" required placeholder="RolHabCampEdi" value="<%= request.getParameter("RolHabCampEdi")%>" /></br>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="DescCampEdi">Nueva descripción</label>
-                                    <input class="form-control" type="text" name="DescCampEdi" required value="<%= request.getParameter("DescCampEdi")%>"/></br>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <button class="btn btn-primary" type="submit" value="Aceptar">Editar</button>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+        
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

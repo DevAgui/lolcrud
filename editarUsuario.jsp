@@ -54,10 +54,9 @@
 
                 String insertarUsuario = "UPDATE usuario SET "
                         
-                        + "CodUsu='" + request.getParameter("CodigoUsuarioEdi") + "',"
-                        + "AliasUsu='" + request.getParameter("NombreUsuarioEdi") + "',"
-                        + "Contrasena='" + request.getParameter("ContrasenaUsuEdi") + "'"
-                        + "WHERE CodUsu='"+ request.getParameter("CodigoUsuarioEdi")+ "'";
+                        + "AliasUsu='" + request.getParameter("NomUsu") + "',"
+                        + "Contrasena='" + request.getParameter("Contrasena") + "'"
+                        + "WHERE CodUsu='"+ request.getParameter("CodUsu")+ "'";
                 
                 s.execute(insertarUsuario);
                 //out.print(insertarCampeon);

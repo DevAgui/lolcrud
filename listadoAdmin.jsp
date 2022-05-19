@@ -80,7 +80,14 @@
                             <td class="col-2"> <%= listadoUsuarios.getString("AliasUsu")%></td>
                             <td class="col-2"> <%= listadoUsuarios.getString("Contrasena")%></td> 
                             <!--<td class="col-3"> listadoCampeones.getString("CodUsu")</td>-->
-                            <td class="col-1"><a href="editar.jsp?id=<%=listadoUsuarios.getString("CodUsu")%>" class="col-1 bi bi-pencil-square rowWithImage" data-bs-toggle="modal" data-bs-target="#modalEditarUsuario"></a></td> 
+                            <td class="col-1">
+                                <form action="formularioEditarUsuarios.jsp" method="get">
+                                    <input type="hidden" name="CodUsu" value="<%=listadoUsuarios.getString("CodUsu")%>">
+                                    <input type="hidden" name="NomUsu" value="<%=listadoUsuarios.getString("AliasUsu")%>">
+                                    <input type="hidden" name="Contrasena" value="<%=listadoUsuarios.getString("Contrasena")%>">
+                                    <button href="formularioEditarUsuarios.jsp" class="col-1 bi bi-pencil-square rowWithImage" type="submit"></button>
+                                </form>
+                            </td> 
                             <td class="col-1"><a href="eliminarUsuario.jsp?id=<%=listadoUsuarios.getString("CodUsu")%>" class=" bi-trash3-fill rowWithImage text-danger" onclick="alert('Has eliminado a <%= listadoUsuarios.getString("AliasUsu")%> con éxito.')"></a></td>
                         </tr>
                         <%
@@ -157,43 +164,7 @@
                     </form>
                 </div>
             </div>
-        </div>
-
-
-        <!-- Modal para editar campeones -->
-        <div class="modal fade" id="modalEditarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalEditarUsuario">Vas a editar un usuario</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body container">
-                        <form action="editarUsuario.jsp">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="CodigoUsuarioEdi">Introduzca el código</label>
-                                    <input class="form-control" type="text" name="CodigoUsuarioEdi" required"><br>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="NombreUsuarioEdi">Nuevo nombre</label>
-                                    <input class="form-control" type="text" name="NombreUsuarioEdi" required/><br>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="CodigoUsuarioEdi">Nueva contraseña</label>
-                                    <input class="form-control" type="text" name="ContrasenaUsuEdi" required/></br>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <button class="btn btn-primary" type="submit" value="Aceptar">Editar</button>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        </div>      
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -39,7 +39,7 @@
             ResultSet campeon = w.executeQuery("SELECT * FROM listado_campeon WHERE CodUsu = " + session.getAttribute("codigoUsuario"));
 
             while (campeon.next()) {
-                if (request.getParameter("NomCampEdi").toString().equals(campeon.getString("NomCamp").toString())) {
+                if (request.getParameter("NomCamp").toString().equals(campeon.getString("NomCamp").toString())) {
                     campeonRepetido = true;
                 }
             }
@@ -54,13 +54,12 @@
 
                 String insertarCampeon = "UPDATE listado_campeon SET "
                         
-                        + "CodCamp='" + request.getParameter("CodCampEdi") + "',"
-                        + "NomCamp='" + request.getParameter("NomCampEdi") + "',"
-                        + "LineaCamp='" + request.getParameter("LineaCampEdi") + "',"
-                        + "RolHabCamp='" + request.getParameter("RolHabCampEdi")+ "',"
-                        + "DescCamp='"+ request.getParameter("DescCampEdi")+ "',"
+                        + "NomCamp='" + request.getParameter("NomCamp") + "',"
+                        + "LineaCamp='" + request.getParameter("LineaCamp") + "',"
+                        + "RolHabCamp='" + request.getParameter("RolHabCamp")+ "',"
+                        + "DescCamp='"+ request.getParameter("DescCamp")+ "',"
                         + "CodUsu='" + session.getAttribute("codigoUsuario")+ "'"
-                        + " WHERE CodCamp='"+ request.getParameter("CodCampEdi")+ "'";
+                        + "WHERE CodCamp='"+ request.getParameter("CodCamp")+ "'";
                 
                 session.setAttribute("datos", listadoCampeon);
                 s.execute(insertarCampeon);
